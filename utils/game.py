@@ -3,7 +3,13 @@ import random # import of the random library to enable radom.choice() Method use
 
 # Hangman class creation
 class Hangman:
-
+    """
+    hangman class is define by 6 methods : init, str, play, start_game, game_over, well_played.
+    __init__ is used to initialize the method and define attributes.
+    start method is used to start of the game. it uses the game over method to deal with the case in which the player loses the game. it also uses the well played method to deal with the case in wich the player wins the game.
+    the play method is used to define the main part of the game.
+    the __str__method is used to display the current state of the game after each round.
+    """
     def __init__(self) -> None: # creation of the init method to define class attibutes
         self.possible_words: list[str] = ["becode", "learning", "mathematics", "sessions", "football", "tennis", "running", "table", "chair", "problem", "understandable", "book"] # list of possible word to guess
         self.word_to_find: list[str] = list(letter for letter in random.choice(self.possible_words)) # use of the random.choice method to select a word in the list
